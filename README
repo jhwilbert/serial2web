@@ -1,1 +1,17 @@
-Simple applicatiom to transfrom serialinput from Current Cost to webrequests. Very useful when pushing data from any serial device to data infrastructures like Pachube or AMEE.
+Serial2web
+---------
+
+[About]
+Simple applicatiom to transfrom serialinput from Current Cost to webrequests. Very useful when pushing data from any serial device to data infrastructures like Pachube or AMEE. To used with Arduino+Ethernet boards.
+
+[How to Use]
+Change rxPin to the to the pin connected to Current Cost
+Change byte server[] = {xxx.xxx.xxx.xxx } to the hostname your are posting to
+Change client.println("Host: hostname"); to the hostname your are posting to
+
+[Requires]
+<SPI.h>
+<Ethernet.h>
+<NewSoftSerial.h>
+<string.h>
+<stdio.h>
