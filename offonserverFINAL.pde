@@ -25,7 +25,7 @@ byte mac[] = { 0x90, 0xA2, 0xDA, 0x00, 0x10, 0x1E };
 byte ip[] = { 10,3,0,63  };
 //byte gateway[] = {10,3,8,70};     
 //byte subnet[] = { 255,255,252,0 };  
-byte server[] = { 10,3,4,173 };  //offon.sandbox.wk.com
+byte server[] = { 10,3,4,173 };  //hostname
 
 Client client(server, 5000);    // setup connection
 
@@ -53,7 +53,7 @@ void postValue(String finalValue) {
     
     // Make a HTTP request:
     client.println("POST /floors/updateEnergynow HTTP/1.1");
-    client.println("Host: offon.sandbox.wk.com");
+    client.println("Host: hostname");
     client.println("Content-Type: application/x-www-form-urlencoded");
     client.print("Content-Length: ");    
     client.println(sizeof(body), DEC);
